@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name upconverter-rescue)(type Legacy)(uri ${KIPRJMOD}/upconverter-rescue.lib)(options "")(descr ""))
+)
