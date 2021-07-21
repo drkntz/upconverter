@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name ZAM_Custom)(type KiCad)(uri ${KIPRJMOD}/ZAM_Custom.pretty)(options "")(descr ""))
+)
