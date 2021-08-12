@@ -351,17 +351,6 @@ F 3 "" H 6800 7400 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6800 7400 6800 7300
-$Comp
-L Regulator_Linear:L7805 U1
-U 1 1 60FC23BE
-P 7600 6900
-F 0 "U1" H 7600 7142 50  0000 C CNN
-F 1 "L7805" H 7600 7051 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 7625 6750 50  0001 L CIN
-F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 7600 6850 50  0001 C CNN
-	1    7600 6900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7300 6900 6800 6900
 Connection ~ 6800 6900
@@ -675,10 +664,10 @@ Text Notes 7950 2250 0    50   ~ 0
 Wire Wire Line
 	7250 3850 7950 3850
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0101
 U 1 1 61166CB9
 P 6700 4550
-F 0 "#PWR?" H 6700 4300 50  0001 C CNN
+F 0 "#PWR0101" H 6700 4300 50  0001 C CNN
 F 1 "GND" H 6705 4377 50  0000 C CNN
 F 2 "" H 6700 4550 50  0001 C CNN
 F 3 "" H 6700 4550 50  0001 C CNN
@@ -686,10 +675,10 @@ F 3 "" H 6700 4550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C1
 U 1 1 61177755
 P 7600 4200
-F 0 "C?" H 7715 4246 50  0000 L CNN
+F 0 "C1" H 7715 4246 50  0000 L CNN
 F 1 "10nF" H 7715 4155 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 7638 4050 50  0001 C CNN
 F 3 "~" H 7600 4200 50  0001 C CNN
@@ -726,10 +715,10 @@ Wire Wire Line
 Text Notes 5750 5050 0    50   ~ 0
 TODO: capacitance for single-ended input?\nC needed on output single ended?
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0102
 U 1 1 611B2FF2
 P 7950 4950
-F 0 "#PWR?" H 7950 4700 50  0001 C CNN
+F 0 "#PWR0102" H 7950 4700 50  0001 C CNN
 F 1 "GND" H 7955 4777 50  0000 C CNN
 F 2 "" H 7950 4950 50  0001 C CNN
 F 3 "" H 7950 4950 50  0001 C CNN
@@ -737,10 +726,10 @@ F 3 "" H 7950 4950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C8
 U 1 1 611B7EF2
 P 7950 4750
-F 0 "C?" H 8065 4796 50  0000 L CNN
+F 0 "C8" H 8065 4796 50  0000 L CNN
 F 1 "10nF" H 8065 4705 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 7988 4600 50  0001 C CNN
 F 3 "~" H 7950 4750 50  0001 C CNN
@@ -756,10 +745,10 @@ Wire Wire Line
 Wire Wire Line
 	8850 4750 9200 4750
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0103
 U 1 1 611F83C6
 P 9200 5200
-F 0 "#PWR?" H 9200 4950 50  0001 C CNN
+F 0 "#PWR0103" H 9200 4950 50  0001 C CNN
 F 1 "GND" H 9205 5027 50  0000 C CNN
 F 2 "" H 9200 5200 50  0001 C CNN
 F 3 "" H 9200 5200 50  0001 C CNN
@@ -768,15 +757,13 @@ F 3 "" H 9200 5200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9200 5200 9200 5150
-Text Notes 7000 6550 0    50   ~ 0
-TODO: 2805 regulator is smaller
 Text Notes 4350 4000 0    50   ~ 0
 TODO: Order parts dangit. Need the SMA\n
 $Comp
-L Device:C C?
+L Device:C C18
 U 1 1 6122E6E8
 P 6800 7100
-F 0 "C?" H 6915 7146 50  0000 L CNN
+F 0 "C18" H 6915 7146 50  0000 L CNN
 F 1 "10uF" H 6915 7055 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 6838 6950 50  0001 C CNN
 F 3 "~" H 6800 7100 50  0001 C CNN
@@ -790,4 +777,17 @@ Wire Wire Line
 Connection ~ 8100 7300
 Wire Wire Line
 	8100 7300 8550 7300
+$Comp
+L Regulator_Linear:LM2936-5.0 U1
+U 1 1 61262CA5
+P 7600 6900
+F 0 "U1" H 7600 7142 50  0000 C CNN
+F 1 "LM2936-5.0" H 7600 7051 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 7600 7125 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2936.pdf" H 7600 6850 50  0001 C CNN
+	1    7600 6900
+	1    0    0    -1  
+$EndComp
+Text Notes 7200 6550 0    50   ~ 0
+TODO: regulator in stock
 $EndSCHEMATC
